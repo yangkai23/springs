@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="clarivate_emp" class="org.parkerInc.Constructor_InjectionApp.Employee">
+<constructor-arg name="no_of_employees" value="12000"></constructor-arg>
+<constructor-arg name="total_salary" value="10000000"></constructor-arg>
+</bean>
+<bean id="wipro_emp" class="org.parkerInc.Constructor_InjectionApp.Employee">
+<constructor-arg name="no_of_employees" value="159000"></constructor-arg>
+<constructor-arg name="total_salary" value="80000000"></constructor-arg>
+</bean>
+<bean id="clarivate" class="org.parkerInc.Constructor_InjectionApp.ClarivateImpl">
+<constructor-arg name="company_id" value="8536"></constructor-arg>
+<constructor-arg name="company_shareValue" value="4500"></constructor-arg>
+<constructor-arg name="employee_details" ref="clarivate_emp"></constructor-arg>
+<constructor-arg name="teams">
+<list>
+<value>Health</value>
+<value>LifeScience</value>
+<value>Development</value>
+<value>CPS</value>
+</list>
+</constructor-arg>
+</bean>
+<bean id="wipro" class="org.parkerInc.Constructor_InjectionApp.WiproImpl">
+<constructor-arg name="company_id" value="8536"></constructor-arg>
+<constructor-arg name="company_shareValue" value="4500"></constructor-arg>
+<constructor-arg name="employee_details" ref="wipro_emp"></constructor-arg>
+<constructor-arg name="teams">
+<list>
+<value>CyberSecurity</value>
+<value>Development</value>
+<value>SalesForce</value>
+<value>Infrastructure</value>
+</list>
+</constructor-arg>
+</bean>
+<bean id="mob" class="org.parkerInc.Constructor_InjectionApp.Mobile" scope="prototype"></bean>
+</beans>

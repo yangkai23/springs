@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="engine" class="org.parkerInc.springApp.Engine">
+	<property name="engine_id" value="153421"/>
+	<property name="engine_power" value="1500"/>
+	<property name="engine_type" value="diesel"/>
+	</bean>
+	<bean id="audi" class="org.parkerInc.springApp.AudiImpl">
+	<property name="id" value="2399"/>
+	<property name="color" value="Blue"/>
+	<property name="Engine" ref="engine"/>
+	<property name="addons">
+	<list>
+	<value>Nitro</value>
+	<value>Rear Bumper</value>
+	<value>Freshner</value>
+	<value>spare wheel</value>
+	</list>
+	</property>
+	</bean>
+	<bean id="bmw" class="org.parkerInc.springApp.BmwImpl">
+	<property name="id" value="2399"/>
+	<property name="color" value="Blue"/>
+	<property name="Engine" ref="engine"/>
+	<property name="addons">
+	<list>
+	<value>Nitro</value>
+	<value>Rear Bumper</value>
+	<value>neon lights</value>
+	<value>spare wheel</value>
+	</list>
+	</property>
+	</bean>
+</beans>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;steroTypeConf/src/Spring(For Annotation).xml&apos; to &apos;Spring.xml&apos;" description="Rename resource &apos;Spring(For Annotation).xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Spring(For Annotation).xml" name="Spring.xml" stamp="1654192389781" updateReferences="true"/>
+</session>
